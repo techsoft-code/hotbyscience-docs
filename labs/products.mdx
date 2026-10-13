@@ -1,0 +1,76 @@
+---
+title: "Browse products"
+description: "Find HBS Labs products, view product details, and choose a variant."
+---
+
+Products appear on the HBS Labs landing page, grouped into **Shape** and **Glow** sections. Each product has its own detail page with images, variants, and a full description.
+
+## Product cards
+
+Each product card on the landing page shows:
+
+- The product thumbnail, name, and price.
+- A short description, trimmed to two lines.
+- An **Add to Cart** button.
+- An **_N_ added** badge when the product is already in your cart. The count adds up every variant of that product in your cart.
+
+Click anywhere on the card, other than **Add to Cart**, to open the product's detail page.
+
+### Add to cart from a product card
+
+What happens when you click **Add to Cart** depends on whether the product has variants:
+
+- **No variants**: HBS Labs adds one unit of the product to your cart right away.
+- **Has variants**: a variant picker opens. It's a bottom sheet on mobile and a dialog on larger screens.
+
+In the variant picker, you can:
+
+1. Select a variant under **Select Variant**. The first variant is selected by default.
+2. Set the quantity with the **+** and **−** buttons.
+3. Click **Add to Cart**.
+
+To see everything about the product before adding it, click **View product details** in the picker.
+
+## Product detail page
+
+The detail page is at `/products/{productId}`. Breadcrumbs at the top link back to **Home** and **Product list**. The page shows:
+
+- **Image gallery**: product images. On larger screens, the gallery stays in view while you scroll the details.
+- **Name and tags**: the product name and any product tags.
+- **Price**: the price of the selected variant.
+- **Select Level**: the available variants.
+- **Short description**: a one-line summary, shown in bold above the full description.
+- **Description**: the full product description.
+- **Important research disclaimer**: product-specific research-use notes, when available.
+
+### Variants and levels
+
+Variants are shown as numbered levels, ordered from lowest to highest, with the amount of each. For example:
+
+```text
+Level 1: 100mg   Level 2: 200mg   Level 3: 300mg
+```
+
+Selecting a level updates the price. If a product has only one variant, HBS Labs shows its amount as preselected, and there's nothing to choose.
+
+### Add to cart from the detail page
+
+1. Select a level.
+2. Set the quantity with the quantity stepper. The minimum is 1.
+3. Click **Add to Cart**.
+
+On mobile, the quantity stepper and **Add to Cart** button stay pinned to the bottom of the screen.
+
+Adding the same product and variant from a product card and from its detail page puts it on the same cart line. HBS Labs increases the quantity instead of adding a duplicate line.
+
+If HBS Labs can't load a product, the page shows a **Connection Issue** warning and **Product Not Found**. Try again, or return to the landing page.
+
+## Added-to-cart confirmation
+
+After you add an item, a notification confirms it, for example **2 items added to Cart**. The notification shows:
+
+- The product image, name, and price.
+- A summary of the category and variant, such as `SHAPE, Level 2: 200mg`.
+- A **View Cart** button that opens your cart.
+
+If you add several items in a row, each new notification replaces the previous one.
