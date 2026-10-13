@@ -18,6 +18,12 @@
         ]
       },
       {
+        "group": "CMS",
+        "pages": [
+          "cms/clinical-lab-results"
+        ]
+      },
+      {
         "group": "Updates",
         "pages": [
           "changelog"
