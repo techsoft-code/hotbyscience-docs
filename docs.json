@@ -65,6 +65,12 @@
         "pages": [
           "care/intake-questionnaire"
         ]
+      },
+      {
+        "group": "Updates",
+        "pages": [
+          "changelog"
+        ]
       }
     ]
   },
