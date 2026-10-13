@@ -9,67 +9,86 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "pages": [
+    "tabs": [
       {
-        "group": "Getting started",
-        "pages": [
-          "index"
+        "tab": "Care",
+        "icon": "heart-pulse",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "index",
+              "care/your-account"
+            ]
+          },
+          {
+            "group": "Your Care Plan",
+            "pages": [
+              "care/intake-questionnaire",
+              "care/purchase-evaluation",
+              "care/hormone-care-plan"
+            ]
+          },
+          {
+            "group": "Payments",
+            "pages": [
+              "care/payment-methods",
+              "care/payment-failed"
+            ]
+          }
         ]
       },
       {
-        "group": "Care",
-        "pages": [
-          "care/your-account"
+        "tab": "Labs",
+        "icon": "flask",
+        "groups": [
+          {
+            "group": "Shopping",
+            "pages": [
+              "labs/overview",
+              "labs/products",
+              "labs/cart"
+            ]
+          },
+          {
+            "group": "Orders & Support",
+            "pages": [
+              "labs/checkout",
+              "labs/contact"
+            ]
+          }
         ]
       },
       {
-        "group": "CMS",
-        "pages": [
-          "cms/clinical-lab-results"
+        "tab": "CMS",
+        "icon": "user-shield",
+        "groups": [
+          {
+            "group": "Admin",
+            "pages": [
+              "cms/sign-in",
+              "cms/patients"
+            ]
+          },
+          {
+            "group": "Lab Management",
+            "pages": [
+              "cms/lab-requisitions",
+              "cms/clinical-lab-results"
+            ]
+          }
         ]
       },
       {
-        "group": "CMS",
-        "pages": [
-          "cms/sign-in",
-          "cms/patients",
-          "cms/lab-requisitions"
-        ]
-      },
-      {
-        "group": "Labs",
-        "pages": [
-          "labs/checkout"
-        ]
-      },
-      {
-        "group": "HBS Labs",
-        "pages": [
-          "labs/overview",
-          "labs/products",
-          "labs/cart",
-          "labs/contact"
-        ]
-      },
-      {
-        "group": "Care",
-        "pages": [
-          "care/purchase-evaluation",
-          "care/hormone-care-plan",
-          "care/payment-methods",
-          "care/payment-failed"
-        ]
-      },
-      {
-        "group": "Care",
-        "pages": [
-          "care/intake-questionnaire"
-        ]
-      },
-      {
-        "group": "Updates",
-        "pages": [
-          "changelog"
+        "tab": "Updates",
+        "icon": "bullhorn",
+        "groups": [
+          {
+            "group": "Updates",
+            "pages": [
+              "changelog"
+            ]
+          }
         ]
       }
     ]
@@ -94,5 +113,8 @@
     "socials": {
       "instagram": "https://www.instagram.com/hotbyscience"
     }
+  },
+  "metadata": {
+    "timestamp": true
   }
 }
