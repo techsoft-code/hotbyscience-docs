@@ -1,0 +1,105 @@
+---
+title: "Guest checkout and payment"
+description: "Check out from the HBS Labs store as a guest, review your order, and pay by card."
+---
+
+HBS Labs lets you buy research products without creating an account. Guest checkout has two steps, **Shipping address** and **Review Order**. You then pay by card in a secure payment window powered by Forte.
+
+## Prerequisites
+
+Before you begin, you must have:
+
+- At least one product in your cart
+- A shipping address in the United States or Canada
+- A valid email address and phone number
+- A credit or debit card
+
+<Note>
+  If your cart is empty, HBS Labs returns you to the storefront instead of opening checkout.
+</Note>
+
+## Check out
+
+<Steps>
+  <Step title="Enter your shipping address">
+    Open your cart and start checkout. On the **Shipping Address** step, fill in:
+
+    | Field | Required | Notes |
+    | --- | --- | --- |
+    | **First Name** and **Last Name** | Yes | |
+    | **Email Address** | Yes | HBS Labs sends order updates here. It's pre-filled if you've checked out before on this browser. |
+    | **Phone Number** | Yes | Pick your country code, then enter your number. HBS Labs shows **Please enter a valid phone number.** if the number isn't valid for that country. |
+    | **Address Line 1** | Yes | Street address or P.O. Box. |
+    | **Address Line 2** | No | Apartment, suite, unit, or building. |
+    | **Town / City** | Yes | |
+    | **County / State** | Yes | |
+    | **Postcode / ZIP Code** | Yes | |
+    | **Country** | Yes | United States or Canada. |
+
+    Click **Continue to Review**.
+  </Step>
+  <Step title="Review your order">
+    The **Review** step lists your research items and quantities, plus:
+
+    - **Subtotal**
+    - **Sales Tax**, calculated from your shipping address
+    - **Shipping**, shown as **Free** when there is no shipping charge
+    - **Total**
+    - Your shipping address
+
+    If HBS Labs can't calculate sales tax, the error appears next to **Sales Tax**. The main button changes to **Retry Tax Calculation**. You can't place the order until tax is calculated.
+
+    To change your address, click **Back**.
+  </Step>
+  <Step title="Accept the terms">
+    Select the checkbox to accept the [Terms & Conditions](#terms-and-privacy-policy) and confirm that the products are for research use only. **Place Order** stays disabled until you select it.
+  </Step>
+  <Step title="Pay by card">
+    Click **Place Order**. The **Payment Method** window shows your order total. Enter:
+
+    - **Card Number**
+    - **Expiration Date** in `MM/YY` format
+    - **CVV / CVC**
+
+    Click **Pay**. Forte tokenizes your card details in the browser, so HBS Labs never receives your full card number.
+
+    To return to the review step without paying, click **Back**.
+  </Step>
+</Steps>
+
+## Payment outcomes
+
+After you click **Pay**, HBS Labs shows **Processing your payment...**. Don't close the page or press back while payment is processing. If you try to leave checkout at this point, HBS Labs shows **Payment is still processing. Please wait.**
+
+The payment then ends in one of three states.
+
+<AccordionGroup>
+  <Accordion title="Order confirmed" icon="circle-check">
+    The **Order Confirmed** screen shows your order number with a **Processing** tag, the items you bought, the price breakdown, your shipping address, and the card's last four digits. Standard delivery takes 3 to 5 business days.
+
+    HBS Labs emails order updates to the address you entered and clears your cart. Click **Continue Shopping** to return to the storefront.
+  </Accordion>
+  <Accordion title="Payment declined" icon="circle-xmark">
+    The **Payment Declined** screen explains why the payment failed. The default message is: *Your card transaction could not be processed. Please verify your details, check your balance, or try another payment method.*
+
+    Click **Try Again** to go back to the review step and pay again, with the same card or a different one.
+  </Accordion>
+  <Accordion title="Payment still being confirmed" icon="clock">
+    Sometimes Forte hasn't sent a final status yet. In that case HBS Labs shows **Your payment is still being confirmed** along with your order number.
+
+    <Warning>
+      Don't submit another payment. Click **Check payment status** to ask for the latest status. HBS Labs never charges your card a second time on its own.
+    </Warning>
+  </Accordion>
+</AccordionGroup>
+
+## Leave checkout
+
+Click the back arrow in the checkout header, or use your browser's back button, to leave. HBS Labs asks you to confirm with **Leave checkout?** because anything you've entered is lost. Click **Leave** to exit or **Stay** to keep going.
+
+## Terms and privacy policy
+
+The HBS Labs store publishes its legal pages at:
+
+- `/terms`: Terms & Conditions, which open in a new tab from the checkbox on the review step
+- `/privacy-policy`: Privacy policy

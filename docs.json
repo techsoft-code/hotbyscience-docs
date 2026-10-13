@@ -35,6 +35,12 @@
           "cms/patients",
           "cms/lab-requisitions"
         ]
+      },
+      {
+        "group": "Labs",
+        "pages": [
+          "labs/checkout"
+        ]
       }
     ]
   },
