@@ -41,6 +41,15 @@
         "pages": [
           "labs/checkout"
         ]
+      },
+      {
+        "group": "HBS Labs",
+        "pages": [
+          "labs/overview",
+          "labs/products",
+          "labs/cart",
+          "labs/contact"
+        ]
       }
     ]
   },

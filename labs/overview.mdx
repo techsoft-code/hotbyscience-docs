@@ -1,0 +1,69 @@
+---
+title: "HBS Labs storefront"
+description: "How the guest-only HBS Labs peptide storefront works, from the research-use entry gate to the landing page."
+---
+
+HBS Labs is the Hot by Science storefront for research peptides. You browse products, build a cart, and check out without creating an account.
+
+## Guest-only shopping
+
+The storefront has no sign-in, sign-up, or saved profiles.
+
+- Your cart is stored in your browser's local storage. It stays in place when you reload the page or come back later in the same browser.
+- Clearing your browser data, or switching to another browser or device, starts you with an empty cart.
+- You enter your contact, shipping, and payment details at checkout for each order.
+
+## Research-use entry gate
+
+HBS Labs products are intended exclusively for laboratory and scientific research. The first time you open the storefront in a browser tab, HBS Labs shows a research-use confirmation before you can use the site.
+
+<Steps>
+  <Step title="Read the research-use guidelines">
+    The confirmation explains that products are not intended for human or veterinary use, consumption, self-administration, or clinical purposes, and that HBS Labs does not provide medical advice.
+  </Step>
+  <Step title="Confirm you understand">
+    Select **I have read and understand the research-use guidelines above.** The **Enter HBS Labs** button stays disabled until you select this checkbox.
+  </Step>
+  <Step title="Enter the store">
+    Click **Enter HBS Labs** to dismiss the overlay and use the storefront.
+  </Step>
+</Steps>
+
+If you click **Leave Site**, the browser goes back to the previous page. If there is no previous page, it opens Google.
+
+Your acknowledgement lasts for the current browser tab session only. HBS Labs asks you to confirm again when you start a new session, for example after closing the tab.
+
+The gate doesn't appear on the **Privacy Policy**, **Terms**, and **Contact Us** pages, so those pages are always reachable.
+
+<Note>
+  The gate is an overlay on top of the page. The page content still loads behind it, so search engines can index product pages. You can't interact with the page until you confirm.
+</Note>
+
+## Landing page
+
+The landing page at `/` is the storefront's product catalog. It contains:
+
+- **Hero section**: the "Unlocking the science of peptides" banner.
+- **Shape**: products focused on metabolism, appetite, and recovery.
+- **Glow**: products focused on skin, hair, and radiance.
+- **Quality section**: an overview of the quality standards HBS Labs stands behind.
+
+The header links back to the landing page from the HBS Labs logo and opens your cart from the **Cart** icon. The footer links to **Privacy Policy**, **Terms**, and **Contact Us**, and to the support email address.
+
+Old links to `/products` redirect to the landing page.
+
+If the catalog can't load, the landing page shows a **Connection Issue** warning in place of the product sections. Try again shortly.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Browse products" icon="flask" href="/labs/products">
+    View product cards, details, and variants.
+  </Card>
+  <Card title="Manage your cart" icon="cart-shopping" href="/labs/cart">
+    Add, update, and remove cart items.
+  </Card>
+  <Card title="Contact HBS Labs" icon="envelope" href="/labs/contact">
+    Send a question to the HBS Labs team.
+  </Card>
+</CardGroup>
