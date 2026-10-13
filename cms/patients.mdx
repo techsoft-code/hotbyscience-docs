@@ -1,0 +1,52 @@
+---
+title: "Patients"
+description: "Browse, search, and filter every patient in the Hot by Science CMS."
+---
+
+The **Patients** page lists every patient account. Use it to find a patient and check where their care plan stands.
+
+## Prerequisites
+
+- You are [signed in to the CMS](/cms/sign-in) as an admin.
+
+## Open the patient list
+
+In the sidebar, under **Operations**, click **Patients**.
+
+The patient table shows these columns:
+
+| Column | Description |
+| --- | --- |
+| **Full name** | The patient's name. A dot next to the name shows whether the account is active or inactive. |
+| **Phone** | The patient's phone number. |
+| **Email** | The patient's email address. |
+| **Care Plan Status** | Where the patient's current care plan is in the lab and care workflow. |
+| **Next Assessment** | The date of the next reassessment. Patients are reassessed every 90 days from the start of their care plan. |
+| **Actions** | Row actions for the patient. |
+
+Empty values show as `---`. The table is paginated.
+
+## Search for a patient
+
+Type in the **Search by name, email or phone number** box. The table updates as you type and returns to the first page. If no patient matches, the table is empty.
+
+## Filter patients
+
+Use the filters next to the search box to narrow the list. Changing a filter returns the table to the first page.
+
+- **Care Plan Status**: Check one or more statuses to show only patients whose care plan has those statuses. Check **All** to show every status.
+- **Account Status**: Select **Active** or **Inactive** to show only accounts with that status.
+
+The **Care Plan Status** filter offers these statuses:
+
+| Status | Meaning |
+| --- | --- |
+| **Intake Pending** | The patient has not finished intake. |
+| **Awaiting Purchase** | The patient has not purchased their plan yet. |
+| **Pending Requisition** | The care plan is waiting for a lab requisition to be sent. |
+| **Sent to Lab** | The requisition was sent and the care plan is waiting for lab results. |
+| **Processing** | Lab results are in and the care plan is in clinical review. |
+| **Active** | The care plan is active. |
+| **Canceled** | The care plan was canceled. |
+
+To manage a patient's lab work, use the [Clinical & Lab](/cms/lab-requisitions) page.

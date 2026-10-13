@@ -1,0 +1,93 @@
+---
+title: "Lab requisitions"
+description: "Create lab requisitions, filter patients by lab status, mark requisitions as sent, and download requisition details."
+---
+
+The **Clinical & Lab** page is where you manage each patient's lab work. Use it to create lab requisitions, track patients through each lab stage, and mark requisitions as sent to the lab.
+
+## Prerequisites
+
+- You are [signed in to the CMS](/cms/sign-in) as an admin.
+
+## Open the Clinical & Lab page
+
+The CMS opens **Clinical & Lab** after you sign in. You can also click **Clinical & Lab** in the sidebar.
+
+The top of the page shows how many patients are at each stage:
+
+- **Lab Requisition Sending**: Care plans waiting for a requisition to be sent.
+- **Lab Results Inputting**: Requisitions sent to the lab and waiting for results.
+- **Care Plan Reviewing**: Care plans in clinical review.
+- **Active Care Plan**: Active care plans.
+
+## Filter patients by lab status
+
+Each tab below the counts lists patients at one stage. The page opens on the **Requisitions** tab.
+
+| Tab | Patients shown |
+| --- | --- |
+| **All activity** | Every patient, regardless of care plan status. |
+| **Requisitions** | Patients with a requisition pending. |
+| **Lab Results** | Patients whose requisition was sent and who are waiting for lab results. |
+| **Care Plans Review** | Patients whose care plan is in clinical review. |
+| **Active Care Plans** | Patients with an active care plan. |
+
+Each tab has a **Search by name, email or phone number** box and shows the patient's name, phone, email, updated date, and status. The selected tab is kept in the page URL, so going back from a patient returns you to the same tab.
+
+Click a patient row to open that patient's detail page.
+
+## Create a lab requisition
+
+A lab requisition orders the tests that are due for a patient's care plan. The CMS picks the lab panel from the care plan, so you don't choose tests yourself.
+
+<Steps>
+  <Step title="Open the form">
+    On the **Requisitions** tab, click **Create Lab Requisition**. The **Create Requisition** dialog opens.
+  </Step>
+  <Step title="Select a patient">
+    In **Patient**, search for and select the patient. Only patients with a care plan pending a requisition appear in the list.
+  </Step>
+  <Step title="Review the required tests">
+    The **Required tests** section shows the tests the requisition will order, along with any collection instructions. The tests are read-only.
+
+    If the CMS can't create a requisition for the patient, it shows the reason instead of the tests and disables **Create Requisition**. For example, the patient already has an open requisition or no lab is due.
+  </Step>
+  <Step title="Add notes">
+    Optionally, add specific requirements, sample handling notes, or clinical background in **Notes**.
+  </Step>
+  <Step title="Create the requisition">
+    Click **Create Requisition**. The patient appears on the **Requisitions** tab with the **Pending Requisition** status.
+  </Step>
+</Steps>
+
+## Mark a requisition as sent
+
+After you send a requisition to the lab, mark it as sent so the patient moves to the next stage.
+
+1. On the **Requisitions** tab, click the actions menu in the patient's row.
+2. Click **Mark as Sent**.
+
+The CMS marks the patient's pending requisition as sent. The patient's status changes to **Sent to Lab**, and the patient moves to the **Lab Results** tab.
+
+The actions available in a row depend on the patient's status:
+
+| Status | Actions |
+| --- | --- |
+| **Pending Requisition** | **Mark as Sent**, **Cancel**, **Download** |
+| **Sent to Lab** | **Enter Results**, **Mark as Completed**, **Download** |
+| **Processing** | **Update Results**, **Mark as Completed**, **Download** |
+
+## Download requisition details
+
+Download a patient's lab requisition details as a PDF to share with the lab or keep for your records.
+
+1. Click the patient's row to open their detail page.
+2. Click **Download**.
+
+The CMS saves an A4 PDF of the patient header and care plan sections as they look on screen. The **Download** button shows a loading state while lab results load, so the PDF includes them. The file is named after the patient and the current date:
+
+```text
+lab-requisition-julian-webb-2026-10-12.pdf
+```
+
+If the PDF can't be generated, the CMS shows "The PDF could not be generated. Please try again."
