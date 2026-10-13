@@ -59,6 +59,12 @@
           "care/payment-methods",
           "care/payment-failed"
         ]
+      },
+      {
+        "group": "Care",
+        "pages": [
+          "care/intake-questionnaire"
+        ]
       }
     ]
   },
