@@ -16,6 +16,14 @@
           "index",
           "quickstart"
         ]
+      },
+      {
+        "group": "CMS",
+        "pages": [
+          "cms/sign-in",
+          "cms/patients",
+          "cms/lab-requisitions"
+        ]
       }
     ],
     "global": {
