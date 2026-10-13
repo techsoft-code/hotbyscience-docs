@@ -50,6 +50,15 @@
           "labs/cart",
           "labs/contact"
         ]
+      },
+      {
+        "group": "Care",
+        "pages": [
+          "care/purchase-evaluation",
+          "care/hormone-care-plan",
+          "care/payment-methods",
+          "care/payment-failed"
+        ]
       }
     ]
   },
