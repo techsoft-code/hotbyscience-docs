@@ -1,0 +1,109 @@
+---
+title: "Lab results"
+description: "Enter, edit, and complete a patient's lab results from the clinical lab detail view in the CMS."
+---
+
+The clinical lab detail view shows a patient's current care plan in one place. Use it to enter lab results when a requisition comes back from the lab, correct results after you enter them, and mark the requisition as completed.
+
+## Open the clinical lab detail view
+
+1. In the CMS, go to **Clinical & Lab**.
+2. Click a patient row to open their care plan.
+
+Only patients with a care plan open a detail view. The header shows the patient's name, care plan status, email, and phone number. A breadcrumb (**Clinical & Lab** > patient name > **Care Plan**) takes you back to the list. Going back keeps the tab and page you were on.
+
+## Lab actions
+
+The header shows lab actions based on the care plan status. Hover over an action to see what it does.
+
+| Care plan status | Available actions |
+| --- | --- |
+| **Pending Requisition** | **Create Requisition**, **Mark as Sent**, **Download** |
+| **Sent to Lab** | **Enter Results**, **Mark as Completed**, **Download** |
+| **Processing** | **Download** |
+
+Other statuses have no lab actions.
+
+- **Create Requisition**: creates a lab requisition with the tests due for this care plan.
+- **Mark as Sent**: marks the requisition as sent to the lab. The patient then awaits lab results.
+- **Enter Results**: opens the lab results form. See [Enter lab results](#enter-lab-results).
+- **Mark as Completed**: completes the requisition after you enter its results. See [Mark a lab as completed](#mark-a-lab-as-completed).
+- **Download**: downloads the lab requisition.
+
+## Enter lab results
+
+**Prerequisites:**
+
+- The patient has a requisition with the **Sent to Lab** status.
+- You have the lab results and, optionally, the original lab report as a PDF.
+
+1. Click **Enter Results** in the header, or click **Edit lab results** on the **Lab Results** card.
+2. In **Lab Results Entry**, select the **Date Collected**.
+3. Paste the results into **Lab Results (JSON Format)**.
+4. Optionally, upload the original lab report under **Original Lab Report**. Click or drag a PDF file into the upload area. The file can be up to 10 MB.
+5. Click **Save Lab Results**.
+
+Enter the results as a JSON array with one object per test:
+
+```json
+[
+  { "test": "Testosterone Total", "result": 24, "unit": "ng/dL" },
+  { "test": "Estradiol", "result": "32.5", "unit": "pg/mL" }
+]
+```
+
+| Field | Required | Description |
+| --- | --- | --- |
+| `test` | Yes | Name of the test. It must match a test on the requisition. |
+| `result` | Yes | Numeric value. Use a number or a numeric string. |
+| `unit` | No | Unit of the result, as text. |
+
+Keys are not case-sensitive. The array must contain at least one test. If an entry is invalid, the form shows the errors under the results field and keeps your input so you can fix it.
+
+<Note>
+  If the patient has no requisition awaiting results, the form shows "This patient has no requisition awaiting results." and you can't save.
+</Note>
+
+## Edit lab results
+
+When no requisition is awaiting results, the same actions open **Edit Lab Results** for the latest entered results instead.
+
+1. Click **Edit lab results** on the **Lab Results** card.
+2. Update the **Date Collected** if needed. The date can't be in the future.
+3. Edit the **Value** of any test in the results table. Values must be numeric. Clear a value to remove that result.
+4. Click **Save Lab Results**.
+
+Only the rows you change are saved. The other results keep their values. Saving corrected results revises the care plan.
+
+## Mark a lab as completed
+
+After you enter the results, click **Mark as Completed** in the header. This completes the requisition. A new requisition is created when the patient's next lab is due.
+
+**Mark as Completed** stays disabled until results are entered. Hover over the button to see "Enter the lab results before completing."
+
+## Review lab results
+
+The **Lab Results** card lists one row per test with these columns: **Test**, **Result**, **Reference range**, **Unit**, **Result date**, and **Created date**. Tests from a requisition without results show empty values.
+
+### Download the original lab report
+
+The **Original Result** section at the bottom of the **Lab Results** card shows the latest uploaded lab report. It includes the file name, format, size, and upload date.
+
+- Click **Download** to save the PDF.
+- Click **View PDF** to open it in a new tab.
+
+If the download is blocked, the CMS opens the PDF in a new tab instead. If no report was uploaded, the section shows "No lab report uploaded yet."
+
+## Navigate with the table of contents
+
+A table of contents is pinned to the right side of the detail view. Each dash represents a section. Hover over it to see the section names, and click one to jump to it:
+
+- **Intake Q&A**
+- **Lab Results**
+- **Physician Note**
+- **Hormone Prescriptions**
+- **Peptide Research**
+- **Supplement Recommendations**
+- **Signature & Publication**
+
+The table of contents highlights the section you're currently viewing as you scroll.
