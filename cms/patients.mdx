@@ -1,6 +1,6 @@
 ---
 title: "Patients"
-description: "Browse, search, and filter every patient in the Hot by Science CMS."
+description: "Browse, search, filter, and view every patient in the Hot by Science CMS."
 sidebarTitle: "Patients"
 ---
 
@@ -49,5 +49,51 @@ The **Care Plan Status** filter offers these statuses:
 | **Processing** | Lab results are in and the care plan is in clinical review. |
 | **Active** | The care plan is active. |
 | **Canceled** | The care plan was canceled. |
+
+## View a patient's details
+
+Click a patient's row in the table to open their detail page. The page title shows the patient's full name, or their email address if no name is on file. To go back to the list, click **Patients** in the breadcrumb at the top of the page.
+
+If the patient no longer exists, the page shows **Patient not found.**
+
+The detail page has four tabs.
+
+### Account
+
+The **Account** tab shows the patient's profile. Empty values show as `---`.
+
+| Field | Description |
+| --- | --- |
+| **First Name** | The patient's first name. |
+| **Last Name** | The patient's last name. |
+| **Sex** | The patient's sex. |
+| **Date of Birth** | The patient's date of birth and current age, for example `March 8, 1985 (41 Years Old)`. |
+| **Account Status** | Whether the account is **Active** or **Inactive**. A dot shows the status. |
+| **Phone number** | The patient's phone number. |
+| **Email Address** | The patient's email address. |
+| **Address line 1** | The patient's address. |
+| **Address line 2** | The second line of the patient's address. |
+
+### Care Plans
+
+The **Care Plans** tab lists the patient's current care plan. The care plan in progress is highlighted. If the patient has no care plan, the tab shows **No care plan yet.**
+
+| Column | Description |
+| --- | --- |
+| **Care Plan ID** | The care plan's identifier. |
+| **Active Date** | The date the care plan started. |
+| **Cycle** | The reassessment cycle, which is 90 days. |
+| **Next Assessment** | The date of the next reassessment. |
+| **Status** | The care plan's status. See the [care plan statuses](#filter-patients) above. |
+
+Click a care plan's row to open it on the [Clinical & Lab](/cms/lab-requisitions) page.
+
+### Subscription
+
+The **Subscription** tab will list the patient's subscriptions with their description, active date, expire date, and status. Subscriptions aren't recorded yet, so the tab shows **No subscriptions yet.**
+
+### Consent
+
+The **Consent** tab will list the consents the patient accepted, with the acceptance date and time, IP address, device information, and document version. Consents aren't recorded yet, so the tab shows **No consents yet.**
 
 To manage a patient's lab work, use the [Clinical & Lab](/cms/lab-requisitions) page.
