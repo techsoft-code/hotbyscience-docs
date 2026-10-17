@@ -80,7 +80,7 @@ Only the rows you change are saved. The other results keep their values. Saving 
 
 After you enter the results, click **Mark as Completed** in the header. This completes the requisition. A new requisition is created when the patient's next lab is due.
 
-Completing the requisition also generates the care plan's hormone recommendations. The CMS refreshes the **Hormone Prescriptions** card so you can review them. See [Review hormone recommendations](#review-hormone-recommendations).
+Completing the requisition also generates the care plan's hormone recommendations and peptide research pathways. The CMS refreshes the **Hormone Prescriptions** and **Peptide Research** cards so you can review them. See [Review hormone recommendations](#review-hormone-recommendations) and [Review peptide research pathways](#review-peptide-research-pathways).
 
 **Mark as Completed** stays disabled until results are entered. Hover over the button to see "Enter the lab results before completing."
 
@@ -113,6 +113,19 @@ If the card shows "No hormone prescriptions yet.", no recommendations exist for 
 - No hormone qualified based on the results.
 - The patient was excluded from hormone recommendations.
 - The patient already has a paid plan.
+
+## Review peptide research pathways
+
+The **Peptide Research** card lists the peptide research pathways generated for the patient's care plan. The pathways are generated when you mark a lab requisition as completed. After you click **Mark as Completed**, the CMS refreshes the card with the new pathways. Pathways stay drafts until the provider signs off and the care plan is published.
+
+The card lists core pathways first, then add-ons. Each pathway shows on its own row:
+
+- **Name**: the peptide product and its amount, for example "GLP-X 5mg / 0.1mg".
+- **Dosage**: the level, units per injection, and frequency, for example "Level 1, 30 units, Twice weekly".
+
+Parts of a pathway that aren't set are left out of the row.
+
+If no pathways were generated for the care plan, the card shows "No peptides added yet." If the pathways fail to load, the card shows "Peptide Research could not be loaded."
 
 ## Navigate with the table of contents
 
